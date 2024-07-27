@@ -11,6 +11,8 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    font-family: WorkSans, sans-serif;
+    font-size: $font-body-size;
 }
 
 #bg-img {
@@ -24,16 +26,70 @@ body {
 }
 
 main {
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
     background-color: $color-white;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
+}
+
+h1 {
+    display: flex;
+    gap: 1rem;
+    font-size: calc(2rem + 1vw);
+
+    img {
+        width: 1.5rem;
+    }
 }
 
 h2 {
     width: 100%;
+    display: flex;
+    justify-content:space-between;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 button {
-    width: 90%;
+    width: 80%;
+    background: none;
+    border: none;
+    text-align: start;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-grayish-purple;
+    }
+}
+
+h1,
+button {
+    color: $color-dark-purple;
+}
+
+section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $color-light-pink;
+
+    &:first-of-type {
+        border-top: none;
+    }
+}
+
+div {
+    padding: 1rem 0;
+    color: $color-grayish-purple;
+    font-weight: 600;
+    display: none;
+}
+
+.active {
+    display: block;
 }
